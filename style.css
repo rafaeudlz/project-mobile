@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+
+  --bc-header: #8E9AAF;
+  --bc-header-h1: #CBC0D3;
+  --bc-page: #EFF1FF;
+  --bc-h2:  #FEEAFA;
+
+  --fc-h1: #FFFFFF;
+  --fc-p: #23053A;
+  --fc-h2: #4A4E69;
+
+  --ff-span: 'Staatliches', sans-serif;
+}
+
+body {
+  font-size: var(--fs-body);
+  background-color: #E5E5E5;
+  height: 100vh;
+}
+
+
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+image {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background: var(--bc-header);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: var(--ff-span);
+}
+
+header img {
+  margin: 3.2rem 0;
+}
+
+header .title {
+  width: 100%;
+}
+
+h1 {
+  background-color: var(--bc-header-h1);
+  color: var(--fc-h1);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.05rem;
+
+  font-family: var(--ff-span);
+  font-size: 4.0rem;
+  font-weight: 400;
+  margin-bottom: 2.9rem;
+
+  padding: 0.7rem 0;
+  
+  -webkit-font-smoothing: antialiased;
+}
+
+.text {
+  font-size: 1.7rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+
+  color: var(--fc-p);
+}
+
+.card {
+  display: grid;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
+}
+
+.card {
+  position: relative;
+  height: fit-content;
+  overflow:hidden;
+  border-radius: 2rem;
+
+  font-family: var(--ff-span);
+}
+
+.card img {
+  transition: all 800ms;
+  animation: slideup 1s;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: saturate(1.5);
+}
+
+.card span {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  text-align: center;
+
+  background-color: var(--bc-h2);
+  border-radius: 20px;
+  color: var(--fc-p);
+
+  font-size: 2rem;
+  line-height: 3.4rem;
+
+  letter-spacing: 0.5rem;
+
+  padding: 0 2.4rem;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
